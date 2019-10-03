@@ -3,9 +3,9 @@ import { PRIMARY_COLOR } from "../../assets/styles/color";
 
 const styles = StyleSheet.create({
   wrapper: {
-    paddingTop: "30px",
-    paddingBottom: "30px",
-    paddingLeft: "50px",
+    paddingTop: 30,
+    paddingBottom: 30,
+    paddingLeft: 50,
     backgroundColor: PRIMARY_COLOR
   }
 });
