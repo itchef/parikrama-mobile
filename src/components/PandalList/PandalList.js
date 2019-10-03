@@ -1,32 +1,43 @@
-import React from "react";
+import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { Content, List } from "native-base";
 
 import PandalItem from "./PandalItem/PandalItem";
 
-const renderPandal = pandal => <PandalItem key={pandal.name} {...pandal} />;
+const renderPandal = pandal => <PandalItem key={pandal.code} {...pandal} />;
 
-const PandalList = ({ config }) => (
-  <Content>
-    <List>{config[0].pandals.map(renderPandal)}</List>
-  </Content>
-);
+class PandalList extends PureComponent {
+  componentDidMount() {
+    const { fetchPandals } = this.props;
+    fetchPandals();
+  }
+
+  render() {
+    const { pandals } = this.props;
+    return (
+      <Content>
+        <List>{pandals.map(renderPandal)}</List>
+      </Content>
+    );
+  }
+}
 
 PandalItem.propTypes = {
-  config: PropTypes.arrayOf(
+  pandals: PropTypes.arrayOf(
     PropTypes.shape({
+      code: PropTypes.string.isRequired,
       zone: PropTypes.string.isRequired,
-      pandals: PropTypes.arrayOf({
-        name: PropTypes.string.isRequired,
-        address: PropTypes.string,
-        location: PropTypes.string.isRequired
-      })
+      name: PropTypes.string.isRequired,
+      address: PropTypes.string,
+      location: PropTypes.string.isRequired
     })
-  )
+  ),
+  fetchPandals: PropTypes.func
 };
 
 PandalItem.defaultProps = {
-  config: []
+  pandals: [],
+  fetchPandals: () => null
 };
 
 export default PandalList;

@@ -2,12 +2,6 @@ const config = [
   {
     pandals: [
       {
-        name: "Sinthee Sarbojanin",
-        address: "Sinthee More, Mondal Para Lane, Kolkata 700002",
-        zone: "North Kolkata",
-        location: "https://goo.gl/maps/jGY5SzicqrkxarUq9"
-      },
-      {
         name: "Bangali Sangha",
         address: "60/2, Kashinath Dutta Road, Kolkata",
         zone: "North Kolkata",

@@ -3,6 +3,8 @@ import { AppLoading } from "expo";
 import * as Font from "expo-font";
 import { Ionicons } from "@expo/vector-icons";
 import { Container } from "native-base";
+import { initializeApp } from "firebase";
+import { YellowBox } from "react-native";
 
 import AppWrapper from "./src/AppWrapper";
 
@@ -12,6 +14,7 @@ export class App extends Component {
     this.state = {
       isReady: false
     };
+    YellowBox.ignoreWarnings(["Setting a timer"]);
   }
 
   async componentDidMount() {
@@ -21,6 +24,7 @@ export class App extends Component {
       ...Ionicons.font
     });
     this.setState({ isReady: true });
+    console.ignoredYellowBox = ["Setting a timer"];
   }
 
   render() {

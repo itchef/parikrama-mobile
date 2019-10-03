@@ -9,6 +9,8 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 *.log
+.env*
+env*
 web-build/
 web-report/
 coverage
