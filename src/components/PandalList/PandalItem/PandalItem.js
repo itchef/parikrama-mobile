@@ -32,7 +32,7 @@ const PandalItem = ({ name, address, location }) => {
       </Body>
       <Right>
         <Button transparent onPress={() => Linking.openURL(location)}>
-          <Text>View</Text>
+          <Text>Map</Text>
         </Button>
       </Right>
     </ListItem>
