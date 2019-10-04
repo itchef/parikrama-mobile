@@ -13,3 +13,9 @@ export const fetchPandalList = cb => {
       cb(data);
     });
 };
+
+export const filterPandals = (pandals, query) =>
+  pandals.filter(
+    ({ name, address, zone }) =>
+      name.includes(query) || address.includes(query) || zone.includes(query)
+  );

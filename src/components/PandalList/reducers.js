@@ -13,9 +13,9 @@ const reducers = (state = initialStore, action) => {
     case FETCH_PANDALS_SUCCESS:
       return action.payload;
     case FETCH_PANDALS_ERROR:
-      return [];
+      return state;
     default:
-      return [];
+      return state;
   }
 };
 
