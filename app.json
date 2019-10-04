@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "Parikrama",
+    "description": "Parikrama, is a mobile app to get possible list for Durga Puja 2019",
     "slug": "parikrama-mobile",
     "privacy": "public",
     "sdkVersion": "35.0.0",
