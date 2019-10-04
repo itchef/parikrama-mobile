@@ -26,7 +26,8 @@
     "jest": "^24.9.0",
     "enzyme": "^3.10.0",
     "firebase": "7.0.0",
-    "enzyme-adapter-react-16": "^1.14.0"
+    "enzyme-adapter-react-16": "^1.14.0",
+    "rn-placeholder": "^3.0.0"
   },
   "private": true,
   "jest": {
