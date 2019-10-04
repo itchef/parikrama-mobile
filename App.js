@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { AppLoading } from "expo";
 import * as Font from "expo-font";
 import { Ionicons } from "@expo/vector-icons";
-import { Container } from "native-base";
+import { Container, Root } from "native-base";
 import { initializeApp } from "firebase";
 import { YellowBox } from "react-native";
 
@@ -33,9 +33,11 @@ export class App extends Component {
     }
 
     return (
-      <Container>
-        <AppWrapper />
-      </Container>
+      <Root>
+        <Container>
+          <AppWrapper />
+        </Container>
+      </Root>
     );
   }
 }
