@@ -35,7 +35,7 @@ class Header extends PureComponent {
         <Title>Parikrama</Title>
       </Body>
       <Right>
-        <Icon name="ios-search" onPress={this.onSearchIconPress} />
+        <Icon name="ios-search" style={styles.icon} onPress={this.onSearchIconPress} />
       </Right>
     </>
   );

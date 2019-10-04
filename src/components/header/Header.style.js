@@ -1,5 +1,8 @@
 import { StyleSheet } from "react-native";
-import { PRIMARY_COLOR } from "../../assets/styles/color";
+import {
+  PRIMARY_COLOR,
+  PRIMARY_THEME_ICON_COLOR
+} from "../../assets/styles/color";
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -9,6 +12,9 @@ const styles = StyleSheet.create({
   },
   logoWrapper: {
     paddingLeft: 15
+  },
+  icon: {
+    color: PRIMARY_THEME_ICON_COLOR
   }
 });
 
